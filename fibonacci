@@ -1,0 +1,21 @@
+def fibonacci(n):
+  """
+  This function generates the Fibonacci sequence up to the nth term using iteration.
+
+  Args:
+      n: The number of terms to generate.
+
+  Returns:
+      A list containing the Fibonacci sequence up to the nth term.
+  """
+  a, b = 0, 1
+  fibonacci_sequence = []
+  for _ in range(n):
+    fibonacci_sequence.append(a)
+    a, b = b, a + b
+  return fibonacci_sequence
+
+# Example usage
+n = 10
+fibonacci_numbers = fibonacci(n)
+print(f"The first {n} Fibonacci numbers are: {fibonacci_numbers}")
